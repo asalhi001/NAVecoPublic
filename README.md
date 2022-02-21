@@ -14,3 +14,9 @@
 - Modifier le chemin de la fonction "SegmentData" Ligne 9.
 - Modifier le chemin du Script "segmentation.py" Lignes 16
 - Modifier le chemin du Script "MAIN" Lignes 111/128
+
+### Utilisation Simple.
+- Modifier les endroits d'arrive et de depart dans les lignes 14 et 15
+- Modifier caracteristiques des véhicules dans lignes 111:145
+- Modifier caracteristiques de l'optimisateur dans lignes 147:157
+- Lancer la simulation
