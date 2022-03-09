@@ -246,10 +246,16 @@ for i in range(0,len(elev_list)):
 ElevFiltre1 = []
 for i in range(0,len(ElevFiltre)):
     if len(ElevFiltre)>1:
-        if i<=OrdreFiltre/2:
-            ElevFiltre1.append(sum(ElevFiltre[:int(OrdreFiltre/2)])/len(ElevFiltre[:int(OrdreFiltre/2)]))
+        if i==0:
+            ElevFiltre1.append(ElevFiltre[0])
+        elif i==len(ElevFiltre)-1:
+            ElevFiltre1.append(ElevFiltre[len(ElevFiltre)-1])
+        elif i<=OrdreFiltre/2:
+            #ElevFiltre1.append(sum(ElevFiltre[:int(OrdreFiltre/2)])/len(ElevFiltre[:int(OrdreFiltre/2)]))
+            ElevFiltre1.append(sum(ElevFiltre[:i*2])/len(ElevFiltre[:i*2]))
         elif i>=(len(ElevFiltre)-(OrdreFiltre/2)):
-            ElevFiltre1.append(sum(ElevFiltre[len(ElevFiltre)-int(OrdreFiltre/2):])/len(ElevFiltre[len(ElevFiltre)-int(OrdreFiltre/2):]))
+            #ElevFiltre1.append(sum(ElevFiltre[len(ElevFiltre)-int(OrdreFiltre/2):])/len(ElevFiltre[len(ElevFiltre)-int(OrdreFiltre/2):]))
+            ElevFiltre1.append(sum(ElevFiltre[2*i-len(ElevFiltre)+1:])/len(ElevFiltre[2*i-len(ElevFiltre)+1:]))
         else:
             ElevFiltre1.append(sum(ElevFiltre[i-int(OrdreFiltre/2):i+int(OrdreFiltre/2)])/len(ElevFiltre[i-int(OrdreFiltre/2):i+int(OrdreFiltre/2)]))
 
