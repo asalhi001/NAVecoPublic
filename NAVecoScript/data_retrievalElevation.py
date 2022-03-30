@@ -379,7 +379,7 @@ if DevelopperMode:
 
 DataFinal = []
 
-for i in range(len(LatSichr)-1):
+for i in range(len(LatSichr)):
     DataFinal.append([i,LatSichr[i],LonSichr[i],DistCum[i],MaxSpeed[i],Pente[i],elev_list[i],duration])
 DataFinal.insert(0,['Num','Lat','Lng','Dist (m)','MaxSpeed (m/s)','Slope (rad)','Altitude (m)','Duree (s)'])
 writeCsv(DataFinal,"dataResolE3")
